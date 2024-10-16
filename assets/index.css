@@ -71,10 +71,13 @@ display:inline-block ;}
     
     }
 
+    p{color: black}
+
 
 div li { display: inline-block;
 font-size: 20px;}
 
-.crossBtn {
+.delateBtn, .doneBtn {
 margin: 1.2em;
 padding: 0.15em 0.75em;}
+
