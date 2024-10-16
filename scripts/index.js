@@ -11,7 +11,7 @@ const addNewTask = (e) => {
     todo: inputTask.value,
   };
 
-  list.classList = "newListItem";
+  list.classList.add('newListItem')
 
   list.innerHTML = ` <ul></ul><button></button> `;
 
