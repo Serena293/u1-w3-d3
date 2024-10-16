@@ -1,0 +1,66 @@
+header {
+  text-align: center;
+  padding: 3em 0;
+  background-color: bisque;
+}
+
+h1 {
+  font-size: 40px;
+  font-family: "great vibes", Arial, Helvetica, sans-serif;
+}
+
+main {
+  width: 85%;
+  text-align: center;
+margin: 4em auto;
+}
+fieldset {
+  border: 2px solid bisque;
+  border-radius: 5px;
+  padding: 20px;
+  margin: 20px 0;
+  background-color: #f9f9f9;
+  width: 60%;
+}
+
+legend {
+  font-weight: bold;
+  font-size: 1.2em;
+  color: palevioletred;
+  padding: 0 10px;
+  width: auto;
+  margin-bottom: 10px;
+  font-family:'akaya telivigala', Arial, Helvetica, sans-serif
+}
+
+button{
+padding:0.25em 1em;
+color: palevioletred;
+font-family:'akaya telivigala', Arial, Helvetica, sans-serif;
+font-size: 20px;
+border-radius: 4px;
+margin: 1.5em;}
+
+
+label{font-family:'akaya telivigala';
+margin-right: 1.5em;}
+
+input{border-radius: 4px;
+margin-top: 0.5em}
+
+.newListItem {
+    border: 1px solid bisque;
+    background-color: #f9f9f9;
+    text-align: left;
+    padding: 1em;
+    width: 30%;
+    font-family:'akaya telivigala';
+    
+}
+
+div p {display: inline-block;
+font-size: 20px;}
+
+div button {display: inline-block;
+margin: 1.2em;
+padding: 0.15em 0.75em;}
