@@ -2,6 +2,7 @@ header {
   text-align: center;
   padding: 3em 0;
   background-color: bisque;
+  margin: 0;
 }
 
 h1 {
@@ -12,7 +13,11 @@ h1 {
 main {
   width: 85%;
   text-align: center;
-margin: 4em auto;
+margin: 0 auto;
+border: 1px solid bisque;
+background-color: bisque;
+height: auto;
+
 }
 fieldset {
   border: 2px solid bisque;
@@ -21,6 +26,8 @@ fieldset {
   margin: 20px 0;
   background-color: #f9f9f9;
   width: 60%;
+  margin: 5em auto;
+  
 }
 
 legend {
@@ -39,28 +46,35 @@ color: palevioletred;
 font-family:'akaya telivigala', Arial, Helvetica, sans-serif;
 font-size: 20px;
 border-radius: 4px;
-margin: 1.5em;}
+margin: 1.5em;
+display: inline-block;}
 
 
 label{font-family:'akaya telivigala';
-margin-right: 1.5em;}
+margin-right: 1.5em;
+font-size: 20px;
+display: inline-block;}
 
 input{border-radius: 4px;
-margin-top: 0.5em}
+margin-top: 0.5em;
+height: 2em;
+display:inline-block ;}
 
 .newListItem {
     border: 1px solid bisque;
     background-color: #f9f9f9;
-    text-align: left;
+    text-align: center;
     padding: 1em;
     width: 30%;
     font-family:'akaya telivigala';
+    margin: 2em;
     
-}
+    }
 
-div p {display: inline-block;
+
+div li { display: inline-block;
 font-size: 20px;}
 
-div button {display: inline-block;
+.crossBtn {
 margin: 1.2em;
 padding: 0.15em 0.75em;}

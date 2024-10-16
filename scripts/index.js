@@ -13,18 +13,24 @@ const addNewTask = (e) => {
 
   list.classList = "newListItem";
 
-  list.innerHTML = `<button id='crossBtn'></button> 
-  <p>${newTask.todo}<p>`;
-  const crossBtn = document.getElementById("crossBtn");
-  const listElement = document.querySelector('#list p')
+  list.innerHTML = ` <ul></ul><button></button> `;
 
-  crossBtn.innerText = 'Done'
+  const crossBtn = document.querySelector("div button");
+  crossBtn.classList = "crossBtn";
+  crossBtn.innerText = "Done";
+
+  const listItems = document.getElementsByTagName("ul")[0];
+
+  const listElement = document.createElement('li')
+  listElement.innerText = newTask.todo;
+
+  listItems.appendChild(listElement);
 
   task.reset();
 
-  crossBtn.addEventListener('click', function() {
-    listElement.style.textDecoration = 'line-through';
-  })
+  crossBtn.addEventListener("click", function () {
+    listElement.style.textDecoration = "line-through";
+  });
 };
 
 taskBtn.addEventListener("click", addNewTask);
