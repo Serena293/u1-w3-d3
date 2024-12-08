@@ -61,7 +61,7 @@ margin-top: 0.5em;
 height: 2em;
 display:inline-block ;}
 
-#container{
+/* #container{
     border: 1px solid palevioletred;
     background-color: #f9f9f9;
     text-align: center;
@@ -69,8 +69,8 @@ display:inline-block ;}
    
     font-family:'akaya telivigala';
     margin: 2em 3em;
-  
-    }
+  display: none;
+    } */
 
  
 
@@ -78,6 +78,13 @@ display:inline-block ;}
 
 
 div li { 
+  border: 1px solid palevioletred;
+  background-color: #f9f9f9;
+  text-align: center;
+  padding: 1em;
+ 
+  font-family:'akaya telivigala';
+  margin: 2em 3em;
 font-size: 20px;
 margin: 2em;
 text-align: center;}

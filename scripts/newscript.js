@@ -1,13 +1,16 @@
 const taskBtn = document.getElementById("taskBtn");
 const input = document.getElementById("toDoInput");
-const container = document.getElementById("container");
 const list = document.getElementById("list");
 
 const addTask = (e) => {
-    e.preventDefault();
-  
-    let newInput = input.value
+  e.preventDefault();
 
+  const newInput = input.value.trim(); // Trim input to remove leading/trailing spaces
+
+  if (newInput === "") {
+    alert("Please insert a task");
+  } else {
+    list.style.display = "block";
     const newListItem = document.createElement("li");
     newListItem.innerHTML = `
         <p>${newInput}</p>
@@ -15,20 +18,29 @@ const addTask = (e) => {
         <button class='deleteBtn'>Delete</button>
     `;
 
-    const doneBtn = newListItem.getElementsByClassName('doneBtn')[0];
-    const deleteBtn = newListItem.getElementsByClassName('deleteBtn')[0];
+    // Correctly select buttons by their class names
+    const doneBtn = newListItem.querySelector(".doneBtn");
+    const deleteBtn = newListItem.querySelector(".deleteBtn");
 
-    doneBtn.addEventListener('click', () => {
-        newListItem.querySelector('p').style.textDecoration = "line-through";
+    // Add event listeners
+    doneBtn.addEventListener("click", () => {
+      newListItem.querySelector("p").style.textDecoration = "line-through";
     });
 
-    deleteBtn.addEventListener('click', () => {
-        list.removeChild(newListItem);
+    deleteBtn.addEventListener("click", () => {
+      list.removeChild(newListItem);
+
+      // Hide the list only if no tasks remain
+      if (list.children.length === 0) {
+        list.style.display = "none";
+      }
     });
 
-    list.appendChild(newListItem); 
-   
-    input.value = "";  
+    list.appendChild(newListItem);
+
+    input.value = ""; // Clear the input field
+    input.focus(); // Set focus back to the input field
+  }
 };
 
 taskBtn.addEventListener("click", addTask);
